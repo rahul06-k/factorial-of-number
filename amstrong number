@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+    int n,temp,sum=0,i;
+    printf("enter the non negative integer\n");
+    scanf("%d",&n);
+    temp=n;
+    if(n<100 || n>999)
+    {
+        printf("INVALID INPUT");
+        exit(0);
+    }
+    while(temp!=0)
+    {
+        i=temp%10;
+        sum+=pow(i,3);
+        temp=temp/10;
+    }
+    if(sum==n)
+    printf("%d is a amstrong  number\n");
+    else
+    printf("%d is not a amstrong number\n");
+}
