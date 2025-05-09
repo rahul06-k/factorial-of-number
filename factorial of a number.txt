@@ -1,0 +1,17 @@
+ #include <stdio.h>
+int factorial(int n);
+int main()
+{
+    int n,r,ncr;
+    printf("enter the value of n and r");
+    scanf("%d%d",&n,&r);
+    ncr=factorial(n)/factorial(r)*factorial(n-r);
+    printf("%dc%d is %d\n",n,r,ncr);
+}
+int factorial(int n)
+{
+    int i,f=1;
+    for(i=0;i<n;i++)
+    f*=i;
+    return f;
+}  
